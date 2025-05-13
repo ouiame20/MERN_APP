@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import Input from '../../components/Inputs/Input';
 import { useNavigate } from 'react-router-dom';
 import { validateEmail } from '../../utils/helper';
+import ProfilePhotoSelector from '../../components/Inputs/ProfilePhotoSelector';
 
 
 const SignUp = ({setCurrentPage}) => {
@@ -54,7 +55,7 @@ const SignUp = ({setCurrentPage}) => {
 
       <form onSubmit= {handleSignUp}> 
 
-         {/* <ProfilePhotoSelector image={profilePic} setImage={setProfilePic}/> */}
+         <ProfilePhotoSelector image={profilePic} setImage={setProfilePic}/>
 
         <div className='grid grid-cols-1 md:grid-cols-1 gap2'>
         <Input
