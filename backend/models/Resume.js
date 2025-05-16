@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const ResumeShema = new mongoose.Schema(
+const ResumeSchema = new mongoose.Schema(
     {
       userId: {
         type: mongoose.Schema.Types.ObjectId,
@@ -24,7 +24,7 @@ const ResumeShema = new mongoose.Schema(
         designation: String,
         summary: String,
       },
-      ContactInfo: {
+      contactInfo: {
         email: String,
         phone: String,
         location: String,
@@ -70,7 +70,7 @@ const ResumeShema = new mongoose.Schema(
            year: String,  
         },
       ],
-      language: [
+      languages: [
         {
             name: String,
             progress: Number,
@@ -79,7 +79,7 @@ const ResumeShema = new mongoose.Schema(
       interests: [String],   
     },
     {
-        timestamps: { createdAt: "createdAt", updatedAt: "createdAt" },
+        timestamps: { createdAt: "createdAt", updatedAt: "updatedAt" },
     }
 );
 
